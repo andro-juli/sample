@@ -1,0 +1,48 @@
+.wrap {
+  display: flex;
+  gap: 9px;
+}
+
+.slider {
+  position: relative;
+  width: 295px;
+
+  &:focus {
+    outline: none;
+  }
+  &__range {
+    position: relative;
+    width: 295px;
+    height: 1rem;
+    background: #eeeeee;
+    -webkit-clip-path: url(#shape);
+    clip-path: url(#shape);
+
+    &::after {
+      content: "";
+      background: var(--light-green);
+      width: var(--width);
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: -12px;
+    }
+
+    &_control {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--light-green);
+      position: absolute;
+      top: -0.3rem;
+      left: -12px;
+      cursor: pointer;
+    }
+  }
+}
+
+.minmax {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
